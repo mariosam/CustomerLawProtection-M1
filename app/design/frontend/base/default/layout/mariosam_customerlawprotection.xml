@@ -1,0 +1,27 @@
+<?xml version="1.0" ?>
+<!--
+/**
+ * XML mariosam_customerlawprotection
+ * 
+ * @author      MarioSAM <eu@mariosam.com.br>
+ * @version     1.0.0
+ * @date        2021/01
+ * @copyright   Blog do Mario SAM
+ * 
+ * Insert the new code into the Magento theme to load the phtml with popup code.
+ */
+-->
+<layout version="1.0.0">
+    <!-- em todas as paginas -->
+    <default>
+        <!-- Magento probably already be included :: ifconfig="lgpd/frontend_message/enabled" -->
+        <reference name="head">
+            <action method="addJs"><script>mage/cookies.js</script></action>
+            <block type="page/js_cookie" name="js_cookies" template="page/js/cookie.phtml"/>
+        </reference>
+        <!-- Call the phtml with popup LGPD in all pages :: ifconfig="customerlawprotection/frontend_message/enabled" condition="1" -->
+        <reference name="after_body_start">
+            <block type="customerlawprotection/customerlawprotectionblock" name="consent.popup" as="consent_popup" template="mariosam/customerlawprotection/consentpopup.phtml" ifconfig="customerlawprotection/frontend_message/enabled"/>
+        </reference>
+    </default>
+</layout>

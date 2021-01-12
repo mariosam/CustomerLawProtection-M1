@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * XML config
+ *
+ * Show a message disclamer to user about our privacy (law LGPD/GDPL).
+ *
+ * @author      MarioSAM <eu@mariosam.com.br>
+ * @date        Jan, 2021
+ * @version     1.0.0
+ */
+-->
+<config>
+    <!-- actual version of this module -->
+    <modules>
+        <MarioSAM_CustomerLawProtection>
+            <version>1.0.0</version>
+        </MarioSAM_CustomerLawProtection>
+    </modules>
+    <!-- configuration module class to this module -->
+    <global>
+        <blocks>
+            <customerlawprotection>
+                <class>MarioSAM_CustomerLawProtection_Block</class>
+            </customerlawprotection>
+        </blocks>
+        <helpers>
+            <customerlawprotection>
+                <class>MarioSAM_CustomerLawProtection_Helper</class>
+            </customerlawprotection>
+        </helpers>
+        <models>
+             <customerlawprotection>
+                <class>MarioSAM_CustomerLawProtection_Model_Config_Source</class>
+             </customerlawprotection>
+        </models>
+    </global>
+    <!-- Set default values for fields of this module -->
+    <default>
+        <customerlawprotection>
+            <frontend_message>
+                <enabled>0</enabled>
+                <message><![CDATA[By using our site, you acknowledge that you have read and understand our <a href='/privacy-policy-cookie-restriction-mode' target='_blank'>Cookie Policy</a>, <a href='/privacy-policy-cookie-restriction-mode' target='_blank'>Privacy Policy</a>, and our <a href='/customer-service' target='_blank'>Terms of Service</a>.]]></message>
+                <position>bottom</position>
+                <cookietime>86400</cookietime>
+                <css></css>
+                <js></js>
+            </frontend_message>
+            <clp_next_version>
+               <my_contact>eu@mariosam.com.br</my_contact>
+            </clp_next_version>
+        </customerlawprotection>
+    </default>
+    <frontend>
+        <!-- Set the XML resposable for update the theme layout -->
+        <layout>
+            <updates>
+                <customerlawprotection>
+                    <file>mariosam_customerlawprotection.xml</file>
+                </customerlawprotection>
+            </updates>
+        </layout>
+        <!-- Call the CSV translation keys to frontend words -->
+        <translate>
+            <modules>
+                <customerlawprotection>
+                    <files>
+                        <default>MarioSAM_CustomerLawProtection.csv</default>
+                    </files>
+                </customerlawprotection>
+            </modules>
+        </translate>
+    </frontend>
+    <!-- Call the CSV translation keys to backend words -->
+    <adminhtml>
+        <translate>
+            <modules>
+                <customerlawprotection>
+                    <files>
+                        <default>MarioSAM_CustomerLawProtection.csv</default>
+                    </files>
+                </customerlawprotection>
+            </modules>
+        </translate>
+    </adminhtml>
+</config>

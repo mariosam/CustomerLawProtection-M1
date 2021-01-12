@@ -1,0 +1,154 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * XML system
+ *
+ * @author      MarioSAM <eu@mariosam.com.br>
+ * @version     1.0.0
+ * @date        2021/01
+ * @copyright   Blog do Mario SAM
+ *
+ * Prepare the admin screen options for this module.
+ */
+-->
+<config>
+    <!-- Put a menu option on left menu -->
+    <tabs>
+        <mariosam translate="label" module="customerlawprotection">
+            <label>Mario SAM</label>
+            <sort_order>100</sort_order>
+        </mariosam>
+    </tabs>
+    <!-- create the sections of this module -->
+    <sections>
+        <customerlawprotection translate="label comment" module="customerlawprotection">
+            <label>GDPL Settings</label>
+            <tab>mariosam</tab>
+            <frontend_type>text</frontend_type>
+            <sort_order>500</sort_order>
+            <show_in_default>1</show_in_default>
+            <show_in_website>1</show_in_website>
+            <show_in_store>1</show_in_store>
+            <groups>
+                <!-- block to set info about the privacy message -->
+                <frontend_message translate="label comment">
+                    <label>User Frontend Message</label>
+                    <comment><![CDATA[How to use GDPL? Access the Mario SAM blog and read the post.]]></comment>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>10</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>                
+                    <fields>
+                        <!-- Turn On or Turn off this module -->
+                        <enabled translate="label">
+                            <label>Enable</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>adminhtml/system_config_source_yesno</source_model>
+                            <sort_order>10</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                        </enabled>
+                        <!-- Set the message to show the user about your policy -->
+                        <message>
+                            <label>Message Alert</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>20</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>You can customize this message.</comment>                   
+                        </message>
+                        <!-- Position to show the message above -->
+                        <position translate="label">
+                            <label>Screen Position</label>
+                            <frontend_type>select</frontend_type>
+                            <source_model>customerlawprotection/position</source_model>
+                            <sort_order>30</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Where do you want to show this message?</comment>
+                        </position>
+                        <!-- For how long time you mantein the client accept -->
+                        <cookietime translate="label">
+                            <label>Cookie Lifetime</label>
+                            <frontend_type>text</frontend_type>
+                            <validate>validate-number</validate>
+                            <sort_order>40</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>In seconds. ex.: 3600 (1 hour); 86400 (1 day); 604800 (1 week).</comment>
+                        </cookietime>
+                        <!-- Set custom CSS to shopping cart -->
+                        <css>
+                            <label>Custom CSS</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>120</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Additional CSS.</comment>
+                        </css>
+                        <!-- Set custom JS to shopping cart -->
+                        <js>
+                            <label>Custom JS</label>
+                            <frontend_type>textarea</frontend_type>
+                            <sort_order>130</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Additional Javascript.</comment>
+                        </js>
+                    </fields>
+                </frontend_message>
+                <!--
+                <delete_profile translate="label">
+                    <label>User Delete Profile</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>2</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>                
+                    <fields>
+                        <custom_field_four>
+                            <label>Custom Multiselect Field</label>
+                            <frontend_type>multiselect</frontend_type>
+                            <source_model>customconfig/options</source_model>
+                            <sort_order>3</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>Example of multiselect field.</comment>
+                        </custom_field_four>
+                    </fields>
+                </delete_profile>
+                -->
+                <!-- block to set info about the privacy message -->
+                <clp_next_version translate="label comment">
+                    <label>Expected for the next versions</label>
+                    <frontend_type>text</frontend_type>
+                    <sort_order>999</sort_order>
+                    <show_in_default>1</show_in_default>
+                    <show_in_website>1</show_in_website>
+                    <show_in_store>1</show_in_store>  
+                    <comment><![CDATA[Below a list of things that I expect to implement in the next version of GDPL module:]]></comment>
+                    <fields>
+                        <!-- -->
+                        <my_contact translate="label">
+                            <label>My Contact</label>
+                            <frontend_type>text</frontend_type>
+                            <sort_order>99</sort_order>
+                            <show_in_default>1</show_in_default>
+                            <show_in_website>1</show_in_website>
+                            <show_in_store>1</show_in_store>
+                            <comment>You can talk with me and/or hire me!</comment>
+                        </my_contact>
+                    </fields>
+                </clp_next_version>
+            </groups>
+        </customerlawprotection>
+    </sections>
+</config>

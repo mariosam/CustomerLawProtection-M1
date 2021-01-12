@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * XML :: especify local (community) and make it active/desactive.
+ *
+ * Show a message disclamer to user about our privacy (law LGPD/GDPL).
+ *
+ * @author      MarioSAM <eu@mariosam.com.br>
+ * @date        Jan, 2021
+ * @version     1.0.0
+ */
+-->
+<config>
+    <modules>
+        <MarioSAM_CustomerLawProtection>
+            <active>true</active>
+            <codePool>community</codePool>
+        </MarioSAM_CustomerLawProtection>
+    </modules>
+</config>
