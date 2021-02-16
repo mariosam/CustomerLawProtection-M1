@@ -21,7 +21,7 @@
         </reference>
         <!-- Call the phtml with popup LGPD in all pages :: ifconfig="customerlawprotection/frontend_message/enabled" condition="1" -->
         <reference name="after_body_start">
-            <block type="customerlawprotection/customerlawprotectionblock" name="consent.popup" as="consent_popup" template="mariosam/customerlawprotection/consentpopup.phtml" ifconfig="customerlawprotection/frontend_message/enabled"/>
+            <block type="customerlawprotection/customerLawProtectionBlock" name="consent.popup" as="consent_popup" template="mariosam/customerlawprotection/consentpopup.phtml" ifconfig="customerlawprotection/frontend_message/enabled"/>
         </reference>
     </default>
 </layout>
